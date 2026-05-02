@@ -56,7 +56,7 @@ function HomePage() {
               Powered by Lovable AI · No setup required
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.1]">
-              Read, analyze, and complete any PDF in <span className="bg-gradient-primary bg-clip-text text-transparent">seconds</span>
+              Read, analyze, and complete any PDF in seconds
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
               DocIntel turns dense PDFs into structured data, insights, risk reports,
@@ -72,7 +72,7 @@ function HomePage() {
                 <Link to="/how-it-works">See how it works</Link>
               </Button>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground">
+            <p className="mt-4 text-xs font-bold text-foreground">
               No signup needed · PDFs up to 20 MB
             </p>
           </div>
