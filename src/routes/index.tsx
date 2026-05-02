@@ -56,7 +56,7 @@ function HomePage() {
               Powered by Lovable AI · No setup required
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.1]">
-              Read, analyze, and complete any PDF in <span className="bg-gradient-primary bg-clip-text text-transparent">seconds</span>
+              Read, analyze, and complete any PDF in seconds
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
               DocIntel turns dense PDFs into structured data, insights, risk reports,
