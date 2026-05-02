@@ -3,7 +3,7 @@ import { FileUp, FileText, X, CheckCircle2, Loader2, AlertCircle } from "lucide-
 import { Button } from "@/components/ui/button";
 import { extractPdf } from "@/lib/pdf-extract";
 import { useDoc } from "@/lib/doc-context";
-import { analyzeDocument } from "@/server/doc.functions";
+import { analyzeDocument } from "@/utils/doc.functions";
 
 function formatSize(bytes: number) {
   if (bytes < 1024) return `${bytes} B`;
