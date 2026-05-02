@@ -72,7 +72,7 @@ function HomePage() {
                 <Link to="/how-it-works">See how it works</Link>
               </Button>
             </div>
-            <p className="mt-4 text-xs text-muted-foreground">
+            <p className="mt-4 text-xs font-bold text-foreground">
               No signup needed · PDFs up to 20 MB
             </p>
           </div>
