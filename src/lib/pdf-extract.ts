@@ -1,9 +1,6 @@
 // Client-side PDF text extraction + first-page preview render using pdfjs-dist.
-import * as pdfjsLib from "pdfjs-dist";
-// Vite-friendly worker import
-import workerSrc from "pdfjs-dist/build/pdf.worker.min.mjs?url";
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
+// All pdfjs imports are dynamic to avoid touching browser-only globals
+// (DOMMatrix, etc.) during SSR.
 
 export type ExtractedPdf = {
   text: string;
@@ -12,6 +9,14 @@ export type ExtractedPdf = {
 };
 
 export async function extractPdf(file: File): Promise<ExtractedPdf> {
+  if (typeof window === "undefined") {
+    throw new Error("PDF extraction must run in the browser");
+  }
+  const pdfjsLib = await import("pdfjs-dist");
+  const workerSrc = (await import("pdfjs-dist/build/pdf.worker.min.mjs?url"))
+    .default as string;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
+
   const buf = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
   let text = "";
@@ -25,7 +30,6 @@ export async function extractPdf(file: File): Promise<ExtractedPdf> {
     text += `\n\n--- Page ${i} ---\n${pageText}`;
   }
 
-  // Render first page to canvas for preview
   let previewDataUrl: string | null = null;
   try {
     const firstPage = await pdf.getPage(1);
