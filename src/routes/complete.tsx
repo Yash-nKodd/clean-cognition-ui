@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { extractPdf } from "@/lib/pdf-extract";
-import { completeDocument, type DocCompletion } from "@/server/complete.functions";
+import { completeDocument, type DocCompletion } from "@/utils/complete.functions";
 
 export const Route = createFileRoute("/complete")({
   component: CompletePage,

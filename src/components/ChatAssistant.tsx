@@ -3,7 +3,7 @@ import { Send, Bot, User, Sparkles, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useDoc } from "@/lib/doc-context";
-import { askDocument } from "@/server/doc.functions";
+import { askDocument } from "@/utils/doc.functions";
 import type { ChatMessage } from "@/lib/doc-types";
 
 const suggestedQuestions = [
