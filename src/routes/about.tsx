@@ -49,9 +49,9 @@ function AboutPage() {
         </section>
 
         <section className="max-w-[900px] mx-auto px-4 sm:px-6 pb-20 text-center">
-          <h2 className="text-2xl font-bold">Built with Lovable Cloud + AI</h2>
+          <h2 className="text-2xl font-bold">Built for speed and simplicity</h2>
           <p className="mt-3 text-muted-foreground">
-            DocIntel runs on Lovable Cloud and Lovable AI Gateway — no API keys to wrangle, no infrastructure to babysit.
+            DocIntel runs on a managed cloud + AI backend — no API keys to wrangle, no infrastructure to babysit.
           </p>
           <Button asChild size="lg" className="mt-6 shadow-glow">
             <Link to="/app">Try DocIntel</Link>
