@@ -34,12 +34,12 @@ export const Route = createFileRoute("/")({
 });
 
 const featureCards = [
-  { icon: Database, title: "Structured Data Extraction", desc: "Pulls names, dates, amounts, and key fields from any PDF — no templates required." },
-  { icon: Lightbulb, title: "AI Insights", desc: "Surfaces auto-renewal clauses, anomalies, and patterns hidden in dense documents." },
-  { icon: ShieldAlert, title: "Risk Analysis", desc: "Flags high, medium, and low severity risks with explanations you can act on." },
-  { icon: Gavel, title: "AI Decisions", desc: "Get a clear recommendation with a confidence score and next-step actions." },
-  { icon: MessageSquare, title: "Chat with Your Doc", desc: "Ask questions in plain English. Answers cite specific clauses, dates, and values." },
-  { icon: Wand2, title: "Complete Partial Docs", desc: "Upload an incomplete draft, tell us what kind of doc it is, and AI fills the gaps." },
+  { icon: Database, title: "Structured Data Extraction", desc: "Pulls names, dates, amounts, and key fields from any PDF — no templates required.", tint: "from-violet-500/15 to-fuchsia-500/15", iconColor: "text-violet-600" },
+  { icon: Lightbulb, title: "AI Insights", desc: "Surfaces auto-renewal clauses, anomalies, and patterns hidden in dense documents.", tint: "from-amber-400/15 to-orange-500/15", iconColor: "text-amber-600" },
+  { icon: ShieldAlert, title: "Risk Analysis", desc: "Flags high, medium, and low severity risks with explanations you can act on.", tint: "from-rose-500/15 to-pink-500/15", iconColor: "text-rose-600" },
+  { icon: Gavel, title: "AI Decisions", desc: "Get a clear recommendation with a confidence score and next-step actions.", tint: "from-emerald-500/15 to-teal-500/15", iconColor: "text-emerald-600" },
+  { icon: MessageSquare, title: "Chat with Your Doc", desc: "Ask questions in plain English. Answers cite specific clauses, dates, and values.", tint: "from-sky-500/15 to-cyan-500/15", iconColor: "text-sky-600" },
+  { icon: Wand2, title: "Complete Partial Docs", desc: "Upload an incomplete draft, tell us what kind of doc it is, and AI fills the gaps.", tint: "from-fuchsia-500/15 to-purple-500/15", iconColor: "text-fuchsia-600" },
 ];
 
 function HomePage() {
