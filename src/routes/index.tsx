@@ -53,7 +53,7 @@ function HomePage() {
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 md:py-28 text-center relative">
             <div className="inline-flex items-center gap-1.5 rounded-full border bg-card/80 backdrop-blur px-3 py-1 text-xs text-muted-foreground shadow-soft mb-6">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
-              Powered by Lovable AI · No setup required
+              Powered by AI · No setup required
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.1]">
               Read, analyze, and complete any PDF in <span className="text-gradient-primary">seconds</span>
