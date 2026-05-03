@@ -86,12 +86,15 @@ function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {featureCards.map((f) => (
-              <div key={f.title} className="rounded-xl border bg-card p-6 shadow-soft hover:shadow-card transition-shadow">
-                <div className="h-10 w-10 rounded-lg bg-primary-soft flex items-center justify-center mb-4">
-                  <f.icon className="h-5 w-5 text-primary" />
+              <div key={f.title} className="group relative rounded-2xl border bg-card p-6 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all overflow-hidden">
+                <div className={`absolute inset-0 bg-gradient-to-br ${f.tint} opacity-0 group-hover:opacity-100 transition-opacity`} />
+                <div className="relative">
+                  <div className={`h-11 w-11 rounded-xl bg-gradient-to-br ${f.tint} flex items-center justify-center mb-4 ring-1 ring-border`}>
+                    <f.icon className={`h-5 w-5 ${f.iconColor}`} />
+                  </div>
+                  <h3 className="font-semibold">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground mt-1.5">{f.desc}</p>
                 </div>
-                <h3 className="font-semibold">{f.title}</h3>
-                <p className="text-sm text-muted-foreground mt-1.5">{f.desc}</p>
               </div>
             ))}
           </div>
