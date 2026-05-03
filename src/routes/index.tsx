@@ -49,14 +49,14 @@ function HomePage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-subtle">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 md:py-28 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground shadow-soft mb-6">
+        <section className="relative overflow-hidden bg-gradient-mesh">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 md:py-28 text-center relative">
+            <div className="inline-flex items-center gap-1.5 rounded-full border bg-card/80 backdrop-blur px-3 py-1 text-xs text-muted-foreground shadow-soft mb-6">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
               Powered by Lovable AI · No setup required
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.1]">
-              Read, analyze, and complete any PDF in seconds
+              Read, analyze, and complete any PDF in <span className="text-gradient-primary">seconds</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
               DocIntel turns dense PDFs into structured data, insights, risk reports,
