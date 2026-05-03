@@ -34,12 +34,12 @@ export const Route = createFileRoute("/")({
 });
 
 const featureCards = [
-  { icon: Database, title: "Structured Data Extraction", desc: "Pulls names, dates, amounts, and key fields from any PDF — no templates required." },
-  { icon: Lightbulb, title: "AI Insights", desc: "Surfaces auto-renewal clauses, anomalies, and patterns hidden in dense documents." },
-  { icon: ShieldAlert, title: "Risk Analysis", desc: "Flags high, medium, and low severity risks with explanations you can act on." },
-  { icon: Gavel, title: "AI Decisions", desc: "Get a clear recommendation with a confidence score and next-step actions." },
-  { icon: MessageSquare, title: "Chat with Your Doc", desc: "Ask questions in plain English. Answers cite specific clauses, dates, and values." },
-  { icon: Wand2, title: "Complete Partial Docs", desc: "Upload an incomplete draft, tell us what kind of doc it is, and AI fills the gaps." },
+  { icon: Database, title: "Structured Data Extraction", desc: "Pulls names, dates, amounts, and key fields from any PDF — no templates required.", tint: "from-violet-500/15 to-fuchsia-500/15", iconColor: "text-violet-600" },
+  { icon: Lightbulb, title: "AI Insights", desc: "Surfaces auto-renewal clauses, anomalies, and patterns hidden in dense documents.", tint: "from-amber-400/15 to-orange-500/15", iconColor: "text-amber-600" },
+  { icon: ShieldAlert, title: "Risk Analysis", desc: "Flags high, medium, and low severity risks with explanations you can act on.", tint: "from-rose-500/15 to-pink-500/15", iconColor: "text-rose-600" },
+  { icon: Gavel, title: "AI Decisions", desc: "Get a clear recommendation with a confidence score and next-step actions.", tint: "from-emerald-500/15 to-teal-500/15", iconColor: "text-emerald-600" },
+  { icon: MessageSquare, title: "Chat with Your Doc", desc: "Ask questions in plain English. Answers cite specific clauses, dates, and values.", tint: "from-sky-500/15 to-cyan-500/15", iconColor: "text-sky-600" },
+  { icon: Wand2, title: "Complete Partial Docs", desc: "Upload an incomplete draft, tell us what kind of doc it is, and AI fills the gaps.", tint: "from-fuchsia-500/15 to-purple-500/15", iconColor: "text-fuchsia-600" },
 ];
 
 function HomePage() {
@@ -49,14 +49,14 @@ function HomePage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-subtle">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 md:py-28 text-center">
-            <div className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1 text-xs text-muted-foreground shadow-soft mb-6">
+        <section className="relative overflow-hidden bg-gradient-mesh">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 md:py-28 text-center relative">
+            <div className="inline-flex items-center gap-1.5 rounded-full border bg-card/80 backdrop-blur px-3 py-1 text-xs text-muted-foreground shadow-soft mb-6">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
               Powered by Lovable AI · No setup required
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.1]">
-              Read, analyze, and complete any PDF in seconds
+              Read, analyze, and complete any PDF in <span className="text-gradient-primary">seconds</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
               DocIntel turns dense PDFs into structured data, insights, risk reports,
@@ -86,12 +86,15 @@ function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {featureCards.map((f) => (
-              <div key={f.title} className="rounded-xl border bg-card p-6 shadow-soft hover:shadow-card transition-shadow">
-                <div className="h-10 w-10 rounded-lg bg-primary-soft flex items-center justify-center mb-4">
-                  <f.icon className="h-5 w-5 text-primary" />
+              <div key={f.title} className="group relative rounded-2xl border bg-card p-6 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all overflow-hidden">
+                <div className={`absolute inset-0 bg-gradient-to-br ${f.tint} opacity-0 group-hover:opacity-100 transition-opacity`} />
+                <div className="relative">
+                  <div className={`h-11 w-11 rounded-xl bg-gradient-to-br ${f.tint} flex items-center justify-center mb-4 ring-1 ring-border`}>
+                    <f.icon className={`h-5 w-5 ${f.iconColor}`} />
+                  </div>
+                  <h3 className="font-semibold">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground mt-1.5">{f.desc}</p>
                 </div>
-                <h3 className="font-semibold">{f.title}</h3>
-                <p className="text-sm text-muted-foreground mt-1.5">{f.desc}</p>
               </div>
             ))}
           </div>
