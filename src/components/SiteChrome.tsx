@@ -16,12 +16,12 @@ export function SiteHeader() {
   return (
     <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-30">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5">
-          <div className="h-9 w-9 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow">
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <div className="h-9 w-9 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
             <FileSearch className="h-5 w-5 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-base font-bold tracking-tight">DocIntel</h1>
+            <h1 className="text-base font-bold tracking-tight group-hover:text-primary transition-colors">DocIntel</h1>
             <p className="text-[11px] text-muted-foreground -mt-0.5">AI Document Intelligence</p>
           </div>
         </Link>
