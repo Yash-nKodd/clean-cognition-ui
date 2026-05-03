@@ -37,6 +37,10 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@DocIntel" },
+      { name: "twitter:title", content: "DocIntel — AI Document Intelligence" },
+      { name: "twitter:description", content: "Turn any PDF into structured data, insights, and decisions in seconds." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/19d82c30-d977-4255-a0ba-c059d97ed2c2/id-preview-73776cc1--814610b8-36a3-454e-a014-d30a5e4e167c.lovable.app-1777778385594.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/19d82c30-d977-4255-a0ba-c059d97ed2c2/id-preview-73776cc1--814610b8-36a3-454e-a014-d30a5e4e167c.lovable.app-1777778385594.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
