@@ -50,25 +50,26 @@ function HomePage() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-mesh">
+          <div className="absolute inset-0 bg-gradient-mesh animate-gradient-pan opacity-70 pointer-events-none" />
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-20 md:py-28 text-center relative">
-            <div className="inline-flex items-center gap-1.5 rounded-full border bg-card/80 backdrop-blur px-3 py-1 text-xs text-muted-foreground shadow-soft mb-6">
-              <Sparkles className="h-3.5 w-3.5 text-primary" />
+            <div className="inline-flex items-center gap-1.5 rounded-full border bg-card/80 backdrop-blur px-3 py-1 text-xs text-muted-foreground shadow-soft mb-6 animate-fade-in-up">
+              <Sparkles className="h-3.5 w-3.5 text-primary animate-float-slow" />
               Powered by AI · No setup required
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.1]">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto leading-[1.1] animate-fade-in-up" style={{ animationDelay: "60ms" }}>
               Read, analyze, and complete any PDF in <span className="text-gradient-primary">seconds</span>
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "140ms" }}>
               DocIntel turns dense PDFs into structured data, insights, risk reports,
               and confident decisions — and can even finish your half-written documents.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Button asChild size="lg" className="shadow-glow">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 animate-fade-in-up" style={{ animationDelay: "220ms" }}>
+              <Button asChild size="lg" className="shadow-glow hover-lift">
                 <Link to="/app">
-                  Try it free <ArrowRight className="ml-1 h-4 w-4" />
+                  Try it free <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="hover-lift">
                 <Link to="/how-it-works">See how it works</Link>
               </Button>
             </div>
@@ -85,14 +86,18 @@ function HomePage() {
             <p className="mt-4 text-muted-foreground">Six AI-powered capabilities, one elegant workspace.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featureCards.map((f) => (
-              <div key={f.title} className="group relative rounded-2xl border bg-card p-6 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${f.tint} opacity-0 group-hover:opacity-100 transition-opacity`} />
+            {featureCards.map((f, i) => (
+              <div
+                key={f.title}
+                className="group relative rounded-2xl border bg-card p-6 shadow-soft hover-lift card-shine overflow-hidden animate-fade-in-up"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${f.tint} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <div className="relative">
-                  <div className={`h-11 w-11 rounded-xl bg-gradient-to-br ${f.tint} flex items-center justify-center mb-4 ring-1 ring-border`}>
+                  <div className={`h-11 w-11 rounded-xl bg-gradient-to-br ${f.tint} flex items-center justify-center mb-4 ring-1 ring-border transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
                     <f.icon className={`h-5 w-5 ${f.iconColor}`} />
                   </div>
-                  <h3 className="font-semibold">{f.title}</h3>
+                  <h3 className="font-semibold group-hover:text-primary transition-colors">{f.title}</h3>
                   <p className="text-sm text-muted-foreground mt-1.5">{f.desc}</p>
                 </div>
               </div>
