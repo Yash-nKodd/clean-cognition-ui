@@ -159,6 +159,22 @@
   .bg-gradient-subtle {
     background: var(--gradient-subtle);
   }
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .bg-gradient-mesh {
+    background-color: oklch(0.99 0.005 295);
+    background-image: var(--gradient-mesh);
+  }
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
